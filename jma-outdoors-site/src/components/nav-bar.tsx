@@ -14,10 +14,10 @@ export default function NavBar() {
     <nav className="flex items-center justify-between">
       <div className="flex items-center">
         <Image
-          src="/temp_logo.png" // Replace with your logo path
+          src="/original_logo.png" // Replace with your logo path
           alt="Logo"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
         />
       </div>
       <NavigationMenu>
