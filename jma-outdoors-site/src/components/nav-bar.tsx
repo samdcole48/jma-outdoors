@@ -6,16 +6,15 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 import ContactUsDialog from "@/components/contact-us-dialog";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center p-4 justify-between">
       <div className="flex items-center">
         <Image
-          src="/original_logo.png" // Replace with your logo path
-          alt="Logo"
+          src="/jmaoutdoors-logo-cropped.png"
+          alt="JMA Outdoors"
           width={80}
           height={80}
         />

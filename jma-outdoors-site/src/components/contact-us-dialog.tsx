@@ -32,7 +32,11 @@ const formSchema = z.object({
   message: z.string(),
 });
 
-export default function ContactUsDialog() {
+export default function ContactUsDialog({
+  variant = "default",
+}: {
+  variant?: "default" | "home";
+}) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   // 1. Define your form.
@@ -48,7 +52,7 @@ export default function ContactUsDialog() {
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values); // Handle form submission logic here
-    toast.success("Your message has been sent successfully!")
+    toast.success("Your message has been sent successfully!");
     form.reset();
     setIsDialogOpen(false);
   }
@@ -56,7 +60,9 @@ export default function ContactUsDialog() {
   return (
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogTrigger asChild>
-        <Button variant="ghost">Contact Us</Button>
+        <Button variant={variant === "home" ? "secondary" : "ghost"}>
+          Contact Us
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
