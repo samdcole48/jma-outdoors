@@ -102,27 +102,26 @@ export default function ContactUsDialog({
         <DialogHeader>
           <DialogTitle>Contact Us</DialogTitle>
           <DialogDescription>
-            <div className="flex flex-col gap-4 mt-4">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-primary" />
-                <span>
-                  <span className="font-semibold">Call us:</span>{" "}
-                  <a href="tel:555-123-4567" className="underline font-medium">
-                    (555) 123-4567
-                  </a>
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>
-                  <span className="font-semibold">Or send us a message below:</span>
-                </span>
-              </div>
-              <span className="text-xs text-muted-foreground">
-                You only need to choose one option.
+            You can call us or send a message below. You only need to choose one
+            option.
+          </DialogDescription>
+          <div className="flex flex-col gap-4 mt-4">
+            <div className="flex items-center gap-2">
+              <Phone className="w-5 h-5 text-primary" />
+              <span>
+                <span className="font-semibold">Call us:</span>{" "}
+                <a href="tel:555-123-4567" className="underline font-medium">
+                  (555) 123-4567
+                </a>
               </span>
             </div>
-          </DialogDescription>
+            <div className="flex items-center gap-2">
+              <Mail className="w-5 h-5 text-primary" />
+              <span>
+                <span className="font-semibold">Or send us a message below:</span>
+              </span>
+            </div>
+          </div>
         </DialogHeader>
         <div className="my-4 border-t" />
         <Form {...form}>
